@@ -4,10 +4,10 @@ TextureImporter:
   internalIDToNameTable:
   - first:
       213: -187846985193607601
-    second: Grimm_Standing
+    second: spr_grimm_Standing
   - first:
       213: 978601341283514511
-    second: Grimm_Glowing
+    second: spr_grimm_Glowing
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -92,7 +92,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Grimm_Standing
+      name: spr_grimm_Standing
       rect:
         serializedVersion: 2
         x: 103
@@ -100,7 +100,7 @@ TextureImporter:
         width: 280
         height: 280
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -113,7 +113,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Grimm_Glowing
+      name: spr_grimm_Glowing
       rect:
         serializedVersion: 2
         x: 398
@@ -121,7 +121,7 @@ TextureImporter:
         width: 320
         height: 280
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

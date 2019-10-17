@@ -1,17 +1,28 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Rewired;
 
 public class PlayerMovement : MonoBehaviour
 {
     // Gets the keys from the player input.
     public PlayerInput myPlayerInput;
+    public int reWiredId = 0;
     public float speed = 1.0f;
     // Player's input keys.
     private string up;
     private string down;
     private string left;
     private string right;
+    // Rewired object.
+    private Player player;
+
+    // Awake is called as soon as the object is created.
+    private void Awake()
+    {
+        player = ReInput.players.GetPlayer(reWiredId);
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,7 +35,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        CheckInput360();
+        GetInput();
     }
 
     // Sets the keys to player 1.
@@ -76,25 +87,22 @@ public class PlayerMovement : MonoBehaviour
         // Assign the new position to the player.
         transform.position = tempPosition;
     }
-
-    // Testing input from Xbox 360 controller.
-    void CheckInput360()
+    // ReWired get input.
+    void GetInput()
     {
         Vector3 tempPosition = transform.position;
-
-        if(Input.GetAxis("Player1_Horizontal") > 0.0f)
+        float xMove = player.GetAxis("MoveHorizontal");
+        float yMove = player.GetAxis("MoveVertical");
+        if(xMove != 0.0f)
         {
-            print("Player 1 Right");
-            //tempPosition.x += Input.GetAxis("player1_horizontal");
-            tempPosition.x += speed;
+            print("ReWired Joystick " + reWiredId + " - Horizontal");
+            tempPosition.x += xMove * speed * Time.deltaTime;
         }
-        else if(Input.GetAxis("Player1_Horizontal") < 0.0f)
+        if(xMove != 0.0f)
         {
-            print("Player 1 Left");
-            //tempPosition.x += Input.GetAxis("player1_horizontal");
-            tempPosition.x -= speed;
+            print("ReWired Joystick " + reWiredId + " - Vertical");
+            tempPosition.y += yMove * speed * Time.deltaTime;
         }
-
         transform.position = tempPosition;
     }
 }
