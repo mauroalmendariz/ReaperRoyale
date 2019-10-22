@@ -5,37 +5,31 @@ using Rewired;
 
 public class PlayerMovement : MonoBehaviour
 {
-    // Gets the keys from the player input.
-    public PlayerInput myPlayerInput;
-    public int reWiredId = 0;
     public float speed = 1.0f;
     // Player's input keys.
-    private string up;
-    private string down;
-    private string left;
-    private string right;
+    public string up;
+    public string down;
+    public string left;
+    public string right;
     // Rewired object.
     private Player player;
 
     // Awake is called as soon as the object is created.
     private void Awake()
     {
-        player = ReInput.players.GetPlayer(reWiredId);
+        // player = ReInput.players.GetPlayer(reWiredId);
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        if(myPlayerInput == null)
-        {
-            //TestingKeys();
-        }
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        GetInput();
+        CheckInput();
     }
 
     // Sets the keys to player 1.
@@ -45,15 +39,6 @@ public class PlayerMovement : MonoBehaviour
         down = "s";
         left = "a";
         right = "d";
-    }
-    
-    // Gets the keys assigned to the player from the PlayerInput script.
-    void GetPlayerInputKeys()
-    {
-        up = myPlayerInput.playerUp;
-        down = myPlayerInput.playerDown;
-        left = myPlayerInput.playerLeft;
-        right = myPlayerInput.playerRight;
     }
 
     // Handles the input from the player.
@@ -66,29 +51,29 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKey(up))
         {
             print(up + " key was pressed.");
-            tempPosition.y += speed;
+            tempPosition.y += speed * Time.deltaTime;
         }
         if (Input.GetKey(down))
         {
             print(down + " key was pressed");
-            tempPosition.y -= speed;
+            tempPosition.y -= speed * Time.deltaTime;
         }
         if (Input.GetKey(left))
         {
             print(left + " key was pressed");
-            tempPosition.x -= speed;
+            tempPosition.x -= speed * Time.deltaTime;
         }
         if (Input.GetKey(right))
         {
             print(right + " key was pressed");
-            tempPosition.x += speed;
+            tempPosition.x += speed * Time.deltaTime;
         }
 
         // Assign the new position to the player.
         transform.position = tempPosition;
     }
     // ReWired get input.
-    void GetInput()
+    void ReWiredInput()
     {
         Vector3 tempPosition = transform.position;
         float xMove = player.GetAxis("MoveHorizontal");
