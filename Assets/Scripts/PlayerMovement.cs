@@ -18,7 +18,7 @@ public class PlayerMovement : MonoBehaviour
     // Awake is called as soon as the object is created.
     private void Awake()
     {
-        // player = ReInput.players.GetPlayer(reWiredId);
+        TestingKeys();
     }
 
     // Start is called before the first frame update
