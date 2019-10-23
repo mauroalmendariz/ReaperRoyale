@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 7396401429394716523}
   - component: {fileID: 364652321886291633}
   - component: {fileID: 602592716}
+  - component: {fileID: -3916441657573743573}
+  - component: {fileID: 8269955412050273737}
   m_Layer: 0
   m_Name: Reaper1
   m_TagString: Player
@@ -94,6 +96,41 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73434683baaafd1439377880beff2b01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myPlayerInput: {fileID: 0}
-  reWiredId: 0
   speed: 10
+  reWiredId: 0
+  up: 
+  down: 
+  left: 
+  right: 
+--- !u!114 &-3916441657573743573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5749303358331928666}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa6a736588fe63b49b0231b1abb39e91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pumpkinGrenade: {fileID: 6724691489708040794, guid: 21e184f7dee699e4eb91cf0d0e5d3b19,
+    type: 3}
+  maxSpeed: 10
+--- !u!114 &8269955412050273737
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5749303358331928666}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80582d5ca2ede2e4e9277fbd7e42ac44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerUp: w
+  playerDown: s
+  playerRight: d
+  playerLeft: a
+  fire: Space

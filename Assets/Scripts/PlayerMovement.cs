@@ -6,6 +6,7 @@ using Rewired;
 public class PlayerMovement : MonoBehaviour
 {
     public float speed = 1.0f;
+    public int reWiredId = 0;
     // Player's input keys.
     public string up;
     public string down;

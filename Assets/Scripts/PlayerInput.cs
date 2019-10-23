@@ -9,6 +9,7 @@ public class PlayerInput : MonoBehaviour
     public string playerDown = "s";
     public string playerRight = "d";
     public string playerLeft = "a";
+    public string fire = "Space";
 
     // Start is called before the first frame update
     void Start()
