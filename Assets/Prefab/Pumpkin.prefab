@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5372467009039424638}
   - component: {fileID: 3667357726424495023}
   - component: {fileID: 2959451178980818349}
-  - component: {fileID: 3241134111249750331}
+  - component: {fileID: 5965066626796369963}
   m_Layer: 0
   m_Name: Pumpkin
   m_TagString: Grenade
@@ -91,7 +91,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6724691489708040794}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -120,7 +120,7 @@ CapsuleCollider2D:
   m_Offset: {x: 0.06927466, y: -0.13389832}
   m_Size: {x: 1.4115686, y: 0.8672437}
   m_Direction: 1
---- !u!114 &3241134111249750331
+--- !u!114 &5965066626796369963
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -129,9 +129,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6724691489708040794}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7fcda0aff1caece4eb2d420531d54da9, type: 3}
+  m_Script: {fileID: 11500000, guid: 82badd3ffe19e7d4c998c47387fd2f33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minGroundNormalY: 0.65
-  gravityModifier: 1
-  maxSpeed: 10
+  launchForce: 500
