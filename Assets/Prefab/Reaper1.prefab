@@ -10,11 +10,13 @@ GameObject:
   m_Component:
   - component: {fileID: 7396401429394716523}
   - component: {fileID: 364652321886291633}
-  - component: {fileID: 602592716}
-  - component: {fileID: -3916441657573743573}
-  - component: {fileID: 8269955412050273737}
   - component: {fileID: 1526174647}
   - component: {fileID: 1526174648}
+  - component: {fileID: 602592716}
+  - component: {fileID: 8269955412050273737}
+  - component: {fileID: 1526174649}
+  - component: {fileID: -3916441657573743573}
+  - component: {fileID: 4290858711482352542}
   m_Layer: 0
   m_Name: Reaper1
   m_TagString: Player
@@ -86,55 +88,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &602592716
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5749303358331928666}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 73434683baaafd1439377880beff2b01, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 10
-  reWiredId: 0
-  up: 
-  down: 
-  left: 
-  right: 
---- !u!114 &-3916441657573743573
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5749303358331928666}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa6a736588fe63b49b0231b1abb39e91, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pumpkinGrenade: {fileID: 6724691489708040794, guid: 21e184f7dee699e4eb91cf0d0e5d3b19,
-    type: 3}
---- !u!114 &8269955412050273737
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5749303358331928666}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80582d5ca2ede2e4e9277fbd7e42ac44, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerUp: w
-  playerDown: s
-  playerRight: d
-  playerLeft: a
-  fire: Space
 --- !u!50 &1526174647
 Rigidbody2D:
   serializedVersion: 4
@@ -155,7 +108,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &1526174648
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -182,3 +135,77 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.8, y: 2.8}
   m_EdgeRadius: 0
+--- !u!114 &602592716
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5749303358331928666}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73434683baaafd1439377880beff2b01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
+  up: 
+  down: 
+  left: 
+  right: 
+--- !u!114 &8269955412050273737
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5749303358331928666}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80582d5ca2ede2e4e9277fbd7e42ac44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerUp: w
+  playerDown: s
+  playerRight: d
+  playerLeft: a
+  fire: Space
+--- !u!114 &1526174649
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5749303358331928666}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d03e69c1c6ead44a9e84a6c9d1122d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 0
+--- !u!114 &-3916441657573743573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5749303358331928666}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa6a736588fe63b49b0231b1abb39e91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pumpkinGrenade: {fileID: 6724691489708040794, guid: 21e184f7dee699e4eb91cf0d0e5d3b19,
+    type: 3}
+--- !u!114 &4290858711482352542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5749303358331928666}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a312ab2e40770c54681f8fa9748cbf0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startTimeBetweenAttack: 0

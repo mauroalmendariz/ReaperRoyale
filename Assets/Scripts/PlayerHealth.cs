@@ -19,4 +19,10 @@ public class PlayerHealth : MonoBehaviour
     {
         
     }
+
+    public void DamageHealth(float damageAmount)
+    {
+        health -= damageAmount;
+        Debug.Log(damageAmount + " Damage Taken");
+    }
 }
