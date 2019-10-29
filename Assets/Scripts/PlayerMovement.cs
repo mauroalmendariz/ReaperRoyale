@@ -7,15 +7,20 @@ public class PlayerMovement : MonoBehaviour
 {
     public float speed = 1.0f;
     // Player's input keys.
-    public string up;
-    public string down;
-    public string left;
-    public string right;
+    public PlayerInput myInput;
+    private string up;
+    private string down;
+    private string left;
+    private string right;
 
     // Awake is called as soon as the object is created.
     private void Awake()
     {
-        TestingKeys();
+        if (myInput == null)
+        {
+            myInput = GetComponent<PlayerInput>();
+            SetInputFromPlayerInput();
+        }
     }
 
     // Start is called before the first frame update
@@ -31,12 +36,20 @@ public class PlayerMovement : MonoBehaviour
     }
 
     // Sets the keys to player 1.
-    void TestingKeys()
+    void DefaultKeys()
     {
         up = "w";
         down = "s";
         left = "a";
         right = "d";
+    }
+
+    void SetInputFromPlayerInput()
+    {
+        up = myInput.playerUp;
+        down = myInput.playerDown;
+        left = myInput.playerLeft;
+        right = myInput.playerRight;
     }
 
     // Handles the input from the player.

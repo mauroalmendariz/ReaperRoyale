@@ -28,6 +28,7 @@ public class PlayerAttackMelee : MonoBehaviour
             // Attack.
             if(Input.GetKeyDown(meleeButton))
             {
+                Debug.Log(meleeButton + " button pressed");
                 // Gather all the enemies within melee attack range.
                 Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPosition.position, attackRange);
                 // Go through each and damage them.
@@ -35,8 +36,10 @@ public class PlayerAttackMelee : MonoBehaviour
                 {
                     // Check that I'm not attacking myself.
                     if(enemiesToDamage[i].transform != this.transform)
-                        // Damage the enemy's health.
-                        enemiesToDamage[i].GetComponent<PlayerHealth>().DamageHealth(attackPower);
+                        // Check if the other object has a PlayerHealth script.
+                        if(enemiesToDamage[i].GetComponent<PlayerHealth>())
+                            // Damage the enemy's health.
+                            enemiesToDamage[i].GetComponent<PlayerHealth>().DamageHealth(attackPower);
                 }
             }
             // Reset the timer.
