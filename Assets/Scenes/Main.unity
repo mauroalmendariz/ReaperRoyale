@@ -1032,5 +1032,20 @@ PrefabInstance:
       propertyPath: meleeButton
       value: k
       objectReference: {fileID: 0}
+    - target: {fileID: 4914678819999110021, guid: 16f01b916e5ebaa46b4e2d4134f093ca,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4914678819999110021, guid: 16f01b916e5ebaa46b4e2d4134f093ca,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 1908589012927857357, guid: 16f01b916e5ebaa46b4e2d4134f093ca,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 16f01b916e5ebaa46b4e2d4134f093ca, type: 3}

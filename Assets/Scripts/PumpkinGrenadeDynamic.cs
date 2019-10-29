@@ -6,6 +6,9 @@ public class PumpkinGrenadeDynamic : MonoBehaviour
 {
     public float launchForce;
 
+    [HideInInspector]
+    public Vector2 launchDirection;
+
     private Rigidbody2D rigBody;
 
     private void OnEnable()
@@ -15,7 +18,7 @@ public class PumpkinGrenadeDynamic : MonoBehaviour
 
     private void Start()
     {
-        Vector2 force = (new Vector2(1, 1)).normalized * launchForce;
+        Vector2 force = launchDirection * launchForce;
 
         rigBody.AddForce(force);
     }
