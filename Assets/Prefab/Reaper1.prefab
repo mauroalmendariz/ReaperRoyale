@@ -263,7 +263,7 @@ MonoBehaviour:
   playerRight: d
   playerLeft: a
   playerJump: j
-  fire: Space
+  fire: space
   playerMelee: k
 --- !u!114 &1526174649
 MonoBehaviour:
@@ -290,6 +290,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa6a736588fe63b49b0231b1abb39e91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fireButton: 
   pumpkinGrenade: {fileID: 6724691489708040794, guid: 21e184f7dee699e4eb91cf0d0e5d3b19,
     type: 3}
 --- !u!114 &4290858711482352542

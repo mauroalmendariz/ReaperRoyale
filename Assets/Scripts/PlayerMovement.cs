@@ -12,6 +12,7 @@ public class PlayerMovement : MonoBehaviour
     private string down;
     private string left;
     private string right;
+    private string fire;
 
     // Awake is called as soon as the object is created.
     private void Awake()
@@ -50,11 +51,15 @@ public class PlayerMovement : MonoBehaviour
         down = myInput.playerDown;
         left = myInput.playerLeft;
         right = myInput.playerRight;
+        fire = myInput.fire;
     }
 
     // Handles the input from the player.
     void CheckInput()
     {
+        if (Input.GetKey(fire))
+            return;
+
         // Get the current position.
         Vector3 tempPosition = transform.position;
 
