@@ -66,22 +66,22 @@ public class PlayerMovement : MonoBehaviour
         // Check all the keys.
         if (Input.GetKey(up))
         {
-            print(up + " key was pressed.");
+            //Debug.Log(up + " key was pressed.");
             tempPosition.y += speed * Time.deltaTime;
         }
         if (Input.GetKey(down))
         {
-            print(down + " key was pressed");
+            //Debug.Log(down + " key was pressed");
             tempPosition.y -= speed * Time.deltaTime;
         }
         if (Input.GetKey(left))
         {
-            print(left + " key was pressed");
+            //Debug.Log(left + " key was pressed");
             tempPosition.x -= speed * Time.deltaTime;
         }
         if (Input.GetKey(right))
         {
-            print(right + " key was pressed");
+            //Debug.Log(right + " key was pressed");
             tempPosition.x += speed * Time.deltaTime;
         }
 
