@@ -7,10 +7,13 @@ public class TombPlayerDetector : MonoBehaviour
     public bool isActive = false;
     public int tombHealth = 100;
     public GameObject activePlayer;
+    public Animator soulAnimator;
+    public float soulAnimNormSpeed;
+    public float soulAnimFastSpeed;
     // Start is called before the first frame update
     void Start()
     {
-        
+        soulAnimator.speed = soulAnimNormSpeed;
     }
 
     // Update is called once per frame
@@ -28,6 +31,7 @@ public class TombPlayerDetector : MonoBehaviour
         if(activePlayer == null && collision.tag == "Player")
         {
             SetActivePlayer(collision);
+            soulAnimator.speed = soulAnimFastSpeed;
         }
     }
 
@@ -43,6 +47,7 @@ public class TombPlayerDetector : MonoBehaviour
         {
             RemoveActivePlayer();
             tombHealth = 100;
+            soulAnimator.speed = soulAnimNormSpeed;
         }
     }
 

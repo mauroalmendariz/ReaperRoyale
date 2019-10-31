@@ -93,7 +93,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbea19d07c8778c42a36567cb83c02aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myTomb: {fileID: 0}
+  myTomb: {fileID: 1896219724}
   fullHealth: 0
   defaultScale: 0
 --- !u!1 &6876419089010477627
